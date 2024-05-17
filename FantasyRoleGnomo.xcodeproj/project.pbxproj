@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00D38AE2BF73400000AFF61 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38AD2BF73400000AFF61 /* ApiClient.swift */; };
+		D00D38B02BF73415000AFF61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38AF2BF73415000AFF61 /* ProfileView.swift */; };
+		D00D38B22BF73422000AFF61 /* ProfileViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38B12BF73422000AFF61 /* ProfileViewmodel.swift */; };
 		D08ECA392BF7336E00F51B4D /* FantasyRoleGnomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */; };
 		D08ECA3B2BF7336E00F51B4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA3A2BF7336E00F51B4D /* ContentView.swift */; };
 		D08ECA3D2BF7336F00F51B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08ECA3C2BF7336F00F51B4D /* Assets.xcassets */; };
 		D08ECA402BF7336F00F51B4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08ECA3F2BF7336F00F51B4D /* Preview Assets.xcassets */; };
+		D08ECA4A2BF733B000F51B4D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA492BF733B000F51B4D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00D38AD2BF73400000AFF61 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		D00D38AF2BF73415000AFF61 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D00D38B12BF73422000AFF61 /* ProfileViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewmodel.swift; sourceTree = "<group>"; };
 		D08ECA352BF7336E00F51B4D /* FantasyRoleGnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyRoleGnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyRoleGnomoApp.swift; sourceTree = "<group>"; };
 		D08ECA3A2BF7336E00F51B4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D08ECA3C2BF7336F00F51B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08ECA3F2BF7336F00F51B4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D08ECA492BF733B000F51B4D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,9 @@
 		D08ECA372BF7336E00F51B4D /* FantasyRoleGnomo */ = {
 			isa = PBXGroup;
 			children = (
+				D08ECA482BF7339C00F51B4D /* Moduls */,
+				D08ECA472BF7339000F51B4D /* Network */,
+				D08ECA462BF7338600F51B4D /* Model */,
 				D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */,
 				D08ECA3A2BF7336E00F51B4D /* ContentView.swift */,
 				D08ECA3C2BF7336F00F51B4D /* Assets.xcassets */,
@@ -65,6 +76,31 @@
 				D08ECA3F2BF7336F00F51B4D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D08ECA462BF7338600F51B4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D08ECA492BF733B000F51B4D /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D08ECA472BF7339000F51B4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D00D38AD2BF73400000AFF61 /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D08ECA482BF7339C00F51B4D /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				D00D38AF2BF73415000AFF61 /* ProfileView.swift */,
+				D00D38B12BF73422000AFF61 /* ProfileViewmodel.swift */,
+			);
+			path = Moduls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08ECA4A2BF733B000F51B4D /* Model.swift in Sources */,
 				D08ECA3B2BF7336E00F51B4D /* ContentView.swift in Sources */,
+				D00D38B22BF73422000AFF61 /* ProfileViewmodel.swift in Sources */,
+				D00D38B02BF73415000AFF61 /* ProfileView.swift in Sources */,
 				D08ECA392BF7336E00F51B4D /* FantasyRoleGnomoApp.swift in Sources */,
+				D00D38AE2BF73400000AFF61 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
