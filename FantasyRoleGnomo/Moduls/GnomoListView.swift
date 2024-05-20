@@ -98,4 +98,7 @@ struct GnomoListRowView: View {
     }
 }
 
+#Preview {
+    GnomoListView()
+}
 

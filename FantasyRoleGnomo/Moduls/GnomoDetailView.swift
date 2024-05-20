@@ -70,3 +70,7 @@ struct GnomoDetailView_Previews: PreviewProvider {
     }
 }
 
+#Preview {
+    GnomoListView()
+}
+

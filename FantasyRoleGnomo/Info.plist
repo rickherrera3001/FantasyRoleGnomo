@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Allow Arbitrary Loads</key>
-	<string>YES</string>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict/>
 </dict>
