@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - Fantasyrole
 struct Fantasyrole: Codable {
     let brastlewark: [Brastlewark]
@@ -19,7 +17,7 @@ struct Fantasyrole: Codable {
 }
 
 // MARK: - Brastlewark
-struct Brastlewark: Codable {
+struct Brastlewark: Codable, Identifiable {
     let id: Int
     let name: String
     let thumbnail: String

@@ -8,25 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		D00D38AE2BF73400000AFF61 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38AD2BF73400000AFF61 /* ApiClient.swift */; };
-		D00D38B02BF73415000AFF61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38AF2BF73415000AFF61 /* ProfileView.swift */; };
-		D00D38B22BF73422000AFF61 /* ProfileViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38B12BF73422000AFF61 /* ProfileViewmodel.swift */; };
+		D01EFF6B2BF82018004D21F0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D01EFF6A2BF82018004D21F0 /* SDWebImage */; };
+		D01EFF6D2BF82018004D21F0 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D01EFF6C2BF82018004D21F0 /* SDWebImageMapKit */; };
+		D0638F752BF94827001FDDBB /* GnomoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0638F742BF94827001FDDBB /* GnomoListView.swift */; };
+		D0638F772BF948B1001FDDBB /* GnomoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0638F762BF948B1001FDDBB /* GnomoListViewModel.swift */; };
 		D08ECA392BF7336E00F51B4D /* FantasyRoleGnomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */; };
 		D08ECA3B2BF7336E00F51B4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA3A2BF7336E00F51B4D /* ContentView.swift */; };
 		D08ECA3D2BF7336F00F51B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08ECA3C2BF7336F00F51B4D /* Assets.xcassets */; };
 		D08ECA402BF7336F00F51B4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08ECA3F2BF7336F00F51B4D /* Preview Assets.xcassets */; };
 		D08ECA4A2BF733B000F51B4D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA492BF733B000F51B4D /* Model.swift */; };
+		D0A4C7E72BF9DB05003EED1B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D0A4C7E62BF9DB05003EED1B /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D00D38AD2BF73400000AFF61 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		D00D38AF2BF73415000AFF61 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		D00D38B12BF73422000AFF61 /* ProfileViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewmodel.swift; sourceTree = "<group>"; };
+		D0638F742BF94827001FDDBB /* GnomoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomoListView.swift; sourceTree = "<group>"; };
+		D0638F762BF948B1001FDDBB /* GnomoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomoListViewModel.swift; sourceTree = "<group>"; };
 		D08ECA352BF7336E00F51B4D /* FantasyRoleGnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyRoleGnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyRoleGnomoApp.swift; sourceTree = "<group>"; };
 		D08ECA3A2BF7336E00F51B4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D08ECA3C2BF7336F00F51B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08ECA3F2BF7336F00F51B4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D08ECA492BF733B000F51B4D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D0A4C7E82BF9E0BF003EED1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A4C7E72BF9DB05003EED1B /* Kingfisher in Frameworks */,
+				D01EFF6D2BF82018004D21F0 /* SDWebImageMapKit in Frameworks */,
+				D01EFF6B2BF82018004D21F0 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		D08ECA372BF7336E00F51B4D /* FantasyRoleGnomo */ = {
 			isa = PBXGroup;
 			children = (
+				D0A4C7E82BF9E0BF003EED1B /* Info.plist */,
 				D08ECA482BF7339C00F51B4D /* Moduls */,
 				D08ECA472BF7339000F51B4D /* Network */,
 				D08ECA462BF7338600F51B4D /* Model */,
@@ -97,8 +105,8 @@
 		D08ECA482BF7339C00F51B4D /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
-				D00D38AF2BF73415000AFF61 /* ProfileView.swift */,
-				D00D38B12BF73422000AFF61 /* ProfileViewmodel.swift */,
+				D0638F742BF94827001FDDBB /* GnomoListView.swift */,
+				D0638F762BF948B1001FDDBB /* GnomoListViewModel.swift */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -119,6 +127,11 @@
 			dependencies = (
 			);
 			name = FantasyRoleGnomo;
+			packageProductDependencies = (
+				D01EFF6A2BF82018004D21F0 /* SDWebImage */,
+				D01EFF6C2BF82018004D21F0 /* SDWebImageMapKit */,
+				D0A4C7E62BF9DB05003EED1B /* Kingfisher */,
+			);
 			productName = FantasyRoleGnomo;
 			productReference = D08ECA352BF7336E00F51B4D /* FantasyRoleGnomo.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +160,10 @@
 				Base,
 			);
 			mainGroup = D08ECA2C2BF7336E00F51B4D;
+			packageReferences = (
+				D01EFF692BF82018004D21F0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				D0A4C7E52BF9DB05003EED1B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D08ECA362BF7336E00F51B4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,10 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0638F752BF94827001FDDBB /* GnomoListView.swift in Sources */,
+				D0638F772BF948B1001FDDBB /* GnomoListViewModel.swift in Sources */,
 				D08ECA4A2BF733B000F51B4D /* Model.swift in Sources */,
 				D08ECA3B2BF7336E00F51B4D /* ContentView.swift in Sources */,
-				D00D38B22BF73422000AFF61 /* ProfileViewmodel.swift in Sources */,
-				D00D38B02BF73415000AFF61 /* ProfileView.swift in Sources */,
 				D08ECA392BF7336E00F51B4D /* FantasyRoleGnomoApp.swift in Sources */,
 				D00D38AE2BF73400000AFF61 /* ApiClient.swift in Sources */,
 			);
@@ -315,6 +332,7 @@
 				DEVELOPMENT_TEAM = T7283TTLGQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FantasyRoleGnomo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +362,7 @@
 				DEVELOPMENT_TEAM = T7283TTLGQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FantasyRoleGnomo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -384,6 +403,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D01EFF692BF82018004D21F0 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.2;
+			};
+		};
+		D0A4C7E52BF9DB05003EED1B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D01EFF6A2BF82018004D21F0 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D01EFF692BF82018004D21F0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		D01EFF6C2BF82018004D21F0 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D01EFF692BF82018004D21F0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		D0A4C7E62BF9DB05003EED1B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0A4C7E52BF9DB05003EED1B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D08ECA2D2BF7336E00F51B4D /* Project object */;
 }
