@@ -19,11 +19,15 @@ struct GnomoListView: View {
                 switch viewModel.dataState {
                 case .loading:
                     ProgressView()
-                case .loaded(let gnomes):
-                    List(gnomes) { gnomo in
-                        NavigationLink(destination: GnomoDetailView(gnome: gnomo)) {
-                            GnomoListRowView(gnomo: gnomo)
+                case .loaded:
+                    if let gnomes = viewModel.filteredGnomes {
+                        List(gnomes) { gnomo in
+                            NavigationLink(destination: GnomoDetailView(gnome: gnomo)) {
+                                GnomoListRowView(gnomo: gnomo)
+                            }
                         }
+                        .listStyle(PlainListStyle())
+                        .background(Color.blue)
                     }
                 case .error(let error):
                     Text("Failed to load data: \(error.localizedDescription)")
@@ -33,10 +37,11 @@ struct GnomoListView: View {
             .onAppear {
                 viewModel.fetchData()
             }
+            .background(Color.blue.edgesIgnoringSafeArea(.all))
         }
-        .foregroundColor(.gray)
     }
 }
+
 struct SearchBar: View {
     @Binding var text: String
     
@@ -47,10 +52,14 @@ struct SearchBar: View {
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
-            
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
-                .padding(.trailing, 8)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                            .padding(.trailing, 8)
+                    }
+                )
         }
         .padding(.horizontal)
     }
