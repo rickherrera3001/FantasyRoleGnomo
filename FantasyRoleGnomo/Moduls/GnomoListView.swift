@@ -58,7 +58,7 @@ struct SearchBar: View {
 
 struct GnomoListRowView: View {
     let gnomo: Brastlewark
-
+    
     var body: some View {
         VStack(alignment: .center) {
             KFImage(URL(string: gnomo.thumbnail))
@@ -71,25 +71,25 @@ struct GnomoListRowView: View {
             Spacer().frame(height: 35)
             Text("Name: ").italic()
                 .foregroundColor(.gray) +
-                Text("\(gnomo.name)")
+            Text("\(gnomo.name)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             Spacer().frame(height: 15)
             Text("Age: ").italic()
                 .foregroundColor(.gray) +
-                Text("\(gnomo.age)")
+            Text("\(gnomo.age)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             Spacer().frame(height: 15)
             Text("Hair Color: ").italic()
                 .foregroundColor(.gray) +
-                Text("\(gnomo.hairColor.rawValue)")
+            Text("\(gnomo.hairColor.rawValue)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             Spacer().frame(height: 15)
             Text("Professions: ").italic()
                 .foregroundColor(.gray) +
-                Text(gnomo.professions.map { $0.rawValue }.joined(separator: ", "))
+            Text(gnomo.professions.map { $0.rawValue }.joined(separator: ", "))
                 .font(.subheadline)
                 .foregroundColor(.blue)
             Spacer().frame(height: 15)

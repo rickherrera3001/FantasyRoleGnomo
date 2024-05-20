@@ -12,16 +12,16 @@ class GnomoMasterViewModel: ObservableObject {
     @Published var dataState: DataState = .loading
     
     private let apiClient = ApiClient()
-
+    
     enum DataState {
         case loading
         case loaded([Brastlewark])
         case error(Error)
     }
-
+    
     func fetchData() {
         dataState = .loading
-
+        
         apiClient.getData { [weak self] result in
             DispatchQueue.main.async {
                 switch result {

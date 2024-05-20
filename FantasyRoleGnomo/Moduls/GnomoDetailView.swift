@@ -60,16 +60,6 @@ struct GnomoDetailView: View {
     }
 }
 
-struct GnomoDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        let testGnomo = Brastlewark(id: 0, name: "Test Gnomo", thumbnail: "https://example.com/image.jpg", age: 100, weight: 50.5, height: 120.0, hairColor: .black, professions: [.baker, .blacksmith], friends: [])
-        
-        NavigationView {
-            GnomoDetailView(gnome: testGnomo)
-        }
-    }
-}
-
 #Preview {
     GnomoListView()
 }
