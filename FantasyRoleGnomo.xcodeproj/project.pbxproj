@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0074A522BFAE23000EE44DF /* GnomoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0074A512BFAE23000EE44DF /* GnomoDetailView.swift */; };
 		D00D38AE2BF73400000AFF61 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D38AD2BF73400000AFF61 /* ApiClient.swift */; };
 		D01EFF6B2BF82018004D21F0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D01EFF6A2BF82018004D21F0 /* SDWebImage */; };
 		D01EFF6D2BF82018004D21F0 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D01EFF6C2BF82018004D21F0 /* SDWebImageMapKit */; };
 		D0638F752BF94827001FDDBB /* GnomoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0638F742BF94827001FDDBB /* GnomoListView.swift */; };
-		D0638F772BF948B1001FDDBB /* GnomoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0638F762BF948B1001FDDBB /* GnomoListViewModel.swift */; };
+		D0638F772BF948B1001FDDBB /* GnomoMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0638F762BF948B1001FDDBB /* GnomoMasterViewModel.swift */; };
 		D08ECA392BF7336E00F51B4D /* FantasyRoleGnomoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */; };
 		D08ECA3B2BF7336E00F51B4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08ECA3A2BF7336E00F51B4D /* ContentView.swift */; };
 		D08ECA3D2BF7336F00F51B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08ECA3C2BF7336F00F51B4D /* Assets.xcassets */; };
@@ -21,9 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0074A512BFAE23000EE44DF /* GnomoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomoDetailView.swift; sourceTree = "<group>"; };
 		D00D38AD2BF73400000AFF61 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D0638F742BF94827001FDDBB /* GnomoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomoListView.swift; sourceTree = "<group>"; };
-		D0638F762BF948B1001FDDBB /* GnomoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomoListViewModel.swift; sourceTree = "<group>"; };
+		D0638F762BF948B1001FDDBB /* GnomoMasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomoMasterViewModel.swift; sourceTree = "<group>"; };
 		D08ECA352BF7336E00F51B4D /* FantasyRoleGnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyRoleGnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08ECA382BF7336E00F51B4D /* FantasyRoleGnomoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyRoleGnomoApp.swift; sourceTree = "<group>"; };
 		D08ECA3A2BF7336E00F51B4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,7 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				D0638F742BF94827001FDDBB /* GnomoListView.swift */,
-				D0638F762BF948B1001FDDBB /* GnomoListViewModel.swift */,
+				D0638F762BF948B1001FDDBB /* GnomoMasterViewModel.swift */,
+				D0074A512BFAE23000EE44DF /* GnomoDetailView.swift */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -191,7 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0638F752BF94827001FDDBB /* GnomoListView.swift in Sources */,
-				D0638F772BF948B1001FDDBB /* GnomoListViewModel.swift in Sources */,
+				D0638F772BF948B1001FDDBB /* GnomoMasterViewModel.swift in Sources */,
+				D0074A522BFAE23000EE44DF /* GnomoDetailView.swift in Sources */,
 				D08ECA4A2BF733B000F51B4D /* Model.swift in Sources */,
 				D08ECA3B2BF7336E00F51B4D /* ContentView.swift in Sources */,
 				D08ECA392BF7336E00F51B4D /* FantasyRoleGnomoApp.swift in Sources */,

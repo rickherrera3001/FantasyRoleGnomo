@@ -3,74 +3,99 @@
 //  FantasyRoleGnomo
 //
 //  Created by Ricardo Developer on 18/05/24.
-//
-
 
 import SwiftUI
 import Kingfisher
 
 struct GnomoListView: View {
-    @StateObject private var viewModel = GnomoListViewModel()
+    @ObservedObject var viewModel = GnomoMasterViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                if let gnomos = viewModel.GnomoListView?.brastlewark { // Cambiamos a viewModel.GnomoListView
-                    List(gnomos) { gnomo in
-                        VStack(alignment: .center) {
-                            KFImage(URL(string: gnomo.thumbnail))
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 200, height: 200)
-                                .cornerRadius(50)
-                                .shadow(color: Color.blue.opacity(0.5), radius: 20, x: 0, y: 6)
-                            
-                            Spacer().frame(height: 35)
-                            Text("Name: ").italic()
-                                .foregroundColor(.gray) +
-                                Text("\(gnomo.name)")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer().frame(height: 15)
-                            Text("Age: ").italic()
-                                .foregroundColor(.gray) +
-                                Text("\(gnomo.age)")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer().frame(height: 15)
-                            Text("Hair Color: ").italic()
-                                .foregroundColor(.gray) +
-                                Text("\(gnomo.hairColor.rawValue)")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                            Spacer().frame(height: 15)
-                            Text("Professions: ").italic()
-                                .foregroundColor(.gray) +
-                                Text(gnomo.professions.map { $0.rawValue }.joined(separator: ", "))
-                                .font(.subheadline)
-                                .foregroundColor(.blue)
-                            Spacer().frame(height: 15)
+                SearchBar(text: $viewModel.searchText)
+                    .padding(.horizontal)
+                
+                switch viewModel.dataState {
+                case .loading:
+                    ProgressView()
+                case .loaded(let gnomes):
+                    List(gnomes) { gnomo in
+                        NavigationLink(destination: GnomoDetailView(gnome: gnomo)) {
+                            GnomoListRowView(gnomo: gnomo)
                         }
-                        .padding()
                     }
-                    .listRowBackground(Color(red: 19/255, green: 30/255, blue: 53/255)) // Color de fondo azul para las filas de la lista
-                } else if let error = viewModel.error {
+                case .error(let error):
                     Text("Failed to load data: \(error.localizedDescription)")
-                } else {
-                    Text("Loading...")
                 }
             }
             .navigationTitle("Gnomos")
             .onAppear {
-                viewModel.listData()
+                viewModel.fetchData()
             }
         }
-        .foregroundColor(.gray) // Color de texto predeterminado en blanco para una mejor visibilidad
+        .foregroundColor(.gray)
+    }
+}
+struct SearchBar: View {
+    @Binding var text: String
+    
+    var body: some View {
+        HStack {
+            TextField("Search", text: $text)
+                .padding(8)
+                .padding(.horizontal, 25)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+            
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.gray)
+                .padding(.trailing, 8)
+        }
+        .padding(.horizontal)
     }
 }
 
-struct GnomoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        GnomoListView()
+struct GnomoListRowView: View {
+    let gnomo: Brastlewark
+
+    var body: some View {
+        VStack(alignment: .center) {
+            KFImage(URL(string: gnomo.thumbnail))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200)
+                .cornerRadius(50)
+                .shadow(color: Color.blue.opacity(0.5), radius: 20, x: 0, y: 6)
+            
+            Spacer().frame(height: 35)
+            Text("Name: ").italic()
+                .foregroundColor(.gray) +
+                Text("\(gnomo.name)")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            Spacer().frame(height: 15)
+            Text("Age: ").italic()
+                .foregroundColor(.gray) +
+                Text("\(gnomo.age)")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            Spacer().frame(height: 15)
+            Text("Hair Color: ").italic()
+                .foregroundColor(.gray) +
+                Text("\(gnomo.hairColor.rawValue)")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            Spacer().frame(height: 15)
+            Text("Professions: ").italic()
+                .foregroundColor(.gray) +
+                Text(gnomo.professions.map { $0.rawValue }.joined(separator: ", "))
+                .font(.subheadline)
+                .foregroundColor(.blue)
+            Spacer().frame(height: 15)
+        }
+        .padding()
     }
 }
+
+
